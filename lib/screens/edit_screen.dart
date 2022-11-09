@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../models/notes_operation.dart';
+import 'package:notes_app/models/note.dart';
 
 class EditScreen extends StatelessWidget {
+  const EditScreen({Key? key, this.note}) : super(key: key);
+  final Note? note;
   @override
   Widget build(BuildContext context) {
     String? id;
@@ -12,13 +13,13 @@ class EditScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
-        title: Text('NOTEPAD CLONE'),
+        title: const Text('NOTEPAD CLONE'),
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
       body: Padding(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           top: 15,
           left: 15,
           right: 15,
@@ -27,7 +28,7 @@ class EditScreen extends StatelessWidget {
         child: Column(
           children: [
             TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: InputBorder.none,
                 hintText: 'Title',
                 hintStyle: TextStyle(
@@ -36,7 +37,7 @@ class EditScreen extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -47,7 +48,7 @@ class EditScreen extends StatelessWidget {
             ),
             Expanded(
               child: TextField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: InputBorder.none,
                   hintText: 'Enter Description',
                   hintStyle: TextStyle(
@@ -55,7 +56,7 @@ class EditScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                   color: Colors.white,
                 ),
@@ -71,11 +72,11 @@ class EditScreen extends StatelessWidget {
                 // Navigator.pop(context);
               },
               style: TextButton.styleFrom(
-                padding:
-                    EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
+                padding: const EdgeInsets.only(
+                    left: 30, right: 30, top: 10, bottom: 10),
                 backgroundColor: Colors.white,
               ),
-              child: Text('Simpan Note',
+              child: const Text('Simpan Note',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

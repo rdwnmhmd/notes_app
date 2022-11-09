@@ -1,4 +1,4 @@
-#Tue Nov 08 05:53:53 ICT 2022
-base.0=C\:\\projectflutter\\notes_app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.0=classes.dex
+#Wed Nov 09 11:44:03 ICT 2022
+base.0=C\:\\Users\\arman\\Documents\\flutter\\github_atep\\notes_app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
+path.0=classes.dex

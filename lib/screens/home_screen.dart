@@ -18,11 +18,11 @@ class HomeScreen extends StatelessWidget {
             ),
           );
         },
-        child: Icon(Icons.add, size: 30, color: Colors.blueGrey),
+        child: const Icon(Icons.add, size: 30, color: Colors.blueGrey),
         backgroundColor: Colors.white,
       ),
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Task Manager',
           style: TextStyle(
             fontSize: 25,
@@ -50,31 +50,40 @@ class HomeScreen extends StatelessWidget {
 class NotesCard extends StatelessWidget {
   final Note note;
 
-  NotesCard(this.note);
+  const NotesCard(this.note, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(15),
-      padding: EdgeInsets.all(15),
-      height: 150,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            note.title,
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+    return InkWell(
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => AddScreen(note: note),
           ),
-          SizedBox(height: 5),
-          Text(
-            note.description,
-            style: TextStyle(fontSize: 17),
-          ),
-        ],
+        );
+      },
+      child: Container(
+        margin: const EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
+        height: 150,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              note.title,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 5),
+            Text(
+              note.description,
+              style: const TextStyle(fontSize: 17),
+            ),
+          ],
+        ),
       ),
     );
   }
