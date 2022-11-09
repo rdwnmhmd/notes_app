@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\projectflutter\\notes_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mk\\values-mk.xml",
+            "outputFile": "C:\\Users\\arman\\Documents\\flutter\\github_atep\\notes_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mk\\values-mk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\RidOne\\.gradle\\caches\\transforms-2\\files-2.1\\5f663b08eec19eef9a9d1af662d9025e\\core-1.6.0\\res\\values-mk\\values-mk.xml",
+                    "source": "C:\\Users\\arman\\.gradle\\caches\\transforms-3\\8a2e74e3f98e846f0780ad1b6ff8554b\\transformed\\core-1.6.0\\res\\values-mk\\values-mk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
